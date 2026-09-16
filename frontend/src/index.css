@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+
+:root {
+  --font-h: "Exo 2";
+  --font-link: 'Lato';
+  --font-secondary: "Fredoka";
+  --bg: #1a1a1a;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color: var(--text);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+.tab-link {
+  transition: all 0.3s ease-in-out;
+}
+
+.tab-link:hover {
+  cursor: pointer;
+  transform: scale(1.2) translateY(-8px);
+}
+
+.hero-text {
+  text-align: center;
+  cursor: none;
+
+  /* Text is transparent, gradient becomes the fill */
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  /* Spotlight gradient */
+  background-image: radial-gradient(
+    circle at var(--x) var(--y),
+    rgba(255, 255, 255, 1),
+    rgb(168, 85, 247) 200px
+  );
+
+  transition: background-image 0.1s;
+}
+
+.sun_animation {
+  animation: rotating_sun 20s linear infinite;
+}
+
+@keyframes rotating_sun {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  } 
+}
+
+.current-forecast {
+  background: linear-gradient(to bottom, var(--color-violet-500), var(--color-fuchsia-600));  
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 32px var(--color-fuchsia-500);
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.1);  
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow);
+}
+
+.features-grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 24px;
+  margin-block: 40px;
+}
+  
+.feature-div {
+  box-shadow: 0 0 8px var(--accent);
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  min-height: 125px;
+}
+
+.forecast-display {
+  width: 30%;
+  padding: 12px;
+  background: linear-gradient(to bottom, var(--color-violet-500), var(--color-fuchsia-600));  
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 32px var(--color-fuchsia-500)
+}
+
+.daily-forecast {
+  background: linear-gradient(to bottom, var(--color-violet-500), var(--color-fuchsia-600));  
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 32px var(--color-fuchsia-500)
+}
+
+.daily-details {
+  color: white;
+}
+
+@media (width <= 640px) {
+  .text_container {
+    font-size: 12px;
+  }
+}
