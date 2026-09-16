@@ -13,7 +13,9 @@ const cors = require('cors');
 app.use(express.json());
 
 app.use(cors({
-  origin: "https://cloudio-user.onrender.com/",
+  origin: ["https://cloudio-user.onrender.com",
+    "http://localhost:5173"
+  ],
   methods: ["GET", "POST"],
   credentials: true
 }));

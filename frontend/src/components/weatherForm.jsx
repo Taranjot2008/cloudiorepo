@@ -3,7 +3,7 @@ import React from "react";
 //creating a form component
 export const WeatherForm = () => {
 
-    const API_URL = "http://localhost:4000/search";
+    const API_URL = "https://cloudiorepo.onrender.com/search";
 
     const [location, setLocation] = React.useState("");
     const [error, setError] = React.useState(null);
