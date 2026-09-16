@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom"
+
 //creating a form component
 export const WeatherForm = () => {
 
@@ -7,6 +9,8 @@ export const WeatherForm = () => {
 
     const [location, setLocation] = React.useState("");
     const [error, setError] = React.useState(null);
+
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -33,7 +37,7 @@ export const WeatherForm = () => {
             console.log("City found", json)
 
 
-            window.location.href = `/results?lat=${json.lat}&lng=${json.lng}`;
+            navigate(`/results?lat=${json.lat}&lng=${json.lng}`);
         }
     }
         
