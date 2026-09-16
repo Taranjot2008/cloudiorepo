@@ -5,7 +5,7 @@ import cloudyNight from "./cloudynight.png";
 import humidity from "./humidity.png";
 import lightRain from "./lightrain.png";
 import pm_cloudyDay from "./pm_cloudyday.png";
-import pm_cloudyNight from "./pm_cloudyNight.png";
+import pm_cloudyNight from "./pm_cloudynight.png";
 import rainSnow from "./rainsnow.png";
 import rainy from "./rainy.png";
 import rainyDay from "./rainyday.png";
