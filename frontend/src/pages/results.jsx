@@ -11,7 +11,7 @@ export default function Results() {
 
   const [weatherData, setWeatherData] = React.useState(null);
 
-  const API_URL = `http://localhost:4000/results?lat=${lat}&lng=${lng}`;
+  const API_URL = `http://cloudiorepo.onrender.com/results?lat=${lat}&lng=${lng}`;
 
 
   React.useEffect(() => {
